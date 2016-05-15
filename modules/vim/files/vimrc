@@ -1,0 +1,79 @@
+" Vim configuration file (.vimrc)
+" Last edited: 2009-09-04
+" Aurelien Vallee <vallee.aurelien@gmail.com>
+
+" Enable Pathogen
+execute pathogen#infect()
+
+"==============================================================================
+" BASIC PREFERENCES
+"==============================================================================
+" Show special endline and tab characters
+"set listchars=eol:~,tab:_
+"set list
+
+" Always show status line, even when only 1 buffer is opened
+set laststatus=2
+
+" Drop 'vi' compatibility
+set nocompatible
+
+" No backup nor swap files
+set nobackup
+set nowritebackup
+
+" Syntax highlighting enabled
+syntax on
+
+" Use file type to guess syntax highlighting and indentation
+filetype plugin on
+filetype plugin indent on
+
+" Tabs are 4 characters wide
+set tabstop=4
+
+" Indentation size is 4 characters
+set shiftwidth=4
+
+" Tabs are converted to spaces
+set expandtab
+
+" Display the cursor position on the bottom right corner
+set ruler
+
+" Allow backspace, space, and arrow keys to wrap lines
+set whichwrap=b,s,<,>,[,]
+
+" Display line numbers
+set number
+
+" Quicky display matching paren/bracket when typing
+"set showmatch
+
+" Display --INSERT-- or --REPLACE-- in status line
+set showmode
+
+" Enable basic mouse support (selection, placement and scrolling)
+set mouse=a
+
+" Define places where backspace is allowed to remove a character
+set backspace=indent,eol,start
+
+" Highlight the current line background
+set cursorline
+
+" Do not wrap text, keep it in a single line
+set nowrap
+
+" Enable incremental search
+set incsearch
+
+" Show column at 80 characters
+set colorcolumn=80
+
+" Enable zenburn color scheme, with a darker background
+set background=dark
+colors bubblegum-256-dark
+
+" Start scrolling 5 lines before the window border
+set so=5
