@@ -2,6 +2,7 @@
 
 - git
 - puppet (>=4)
+- puppet-lint (optional)
 
 ### Usage
 
