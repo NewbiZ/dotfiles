@@ -3,9 +3,11 @@ $username = 'avallee'
 $mail = 'vallee.aurelien@gmail.com'
 $home = '/home/avallee'
 
-include vim
-include x11
-include bash
-include tmux
-include git
-include i3
+node 'xmg' {
+    include vim
+    include bash
+    include tmux
+    include git
+    include x11
+    include i3
+}

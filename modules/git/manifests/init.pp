@@ -1,7 +1,7 @@
 class git {
 
     file { "${::home}/.gitconfig":
-        ensure => file,
+        ensure  => file,
         content => template('git/gitconfig.erb')
     }
 
