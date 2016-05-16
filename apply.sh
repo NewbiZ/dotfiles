@@ -20,4 +20,15 @@ sudo puppet module install puppetlabs-vcsrepo
 
 # Apply puppet manifest locally
 echo -e "\n> Applying puppet manifest:"
-sudo puppet apply --verbose --modulepath ${DIR}/modules ${DIR}/manifests
+sudo puppet apply ${DIR}/manifests \
+    --modulepath ${DIR}/modules \
+    --graph \
+    --graphdir ${DIR}/doc
+
+# Generate documentation
+echo -e "\n> Generating documentation in doc/"
+sudo chown avallee:avallee doc
+sudo chown avallee:avallee doc/*
+dot -Tpng doc/expanded_relationships.dot -o doc/expanded_relationships.png
+dot -Tpng doc/relationships.dot -o doc/relationships.png
+dot -Tpng doc/resources.dot -o doc/resources.png
