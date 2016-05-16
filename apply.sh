@@ -20,7 +20,8 @@ sudo puppet module install puppetlabs-vcsrepo
 
 # Apply puppet manifest locally
 echo -e "\n> Applying puppet manifest:"
-sudo puppet apply ${DIR}/manifests \
+sudo puppet apply ${DIR}/manifests/site.pp \
+    --hiera_config ${DIR}/hiera.yaml \
     --modulepath ${DIR}/modules \
     --graph \
     --graphdir ${DIR}/doc

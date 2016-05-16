@@ -5,7 +5,7 @@ class vim::setup {
         ensure => present,
     }
 
-    file { "${::home}/.vimrc":
+    file { "${::hiera('localuser.home')}/.vimrc":
         ensure => file,
         source => 'puppet:///modules/vim/vimrc'
     }

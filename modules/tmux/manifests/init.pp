@@ -4,7 +4,7 @@ class tmux {
         ensure => present,
     }
 
-    file { "${::home}/.tmux.conf":
+    file { "${::hiera('localuser.home')}/.tmux.conf":
         ensure  => file,
         source  => 'puppet:///modules/tmux/tmux.conf',
         require => Package['tmux'],

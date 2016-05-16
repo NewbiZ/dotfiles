@@ -1,6 +1,6 @@
 class bash {
 
-    file { "${::home}/.bashrc":
+    file { "${::hiera('localuser.home')}/.bashrc":
         ensure => file,
         source => 'puppet:///modules/bash/bashrc'
     }

@@ -1,6 +1,6 @@
 define vim::pathogen::bundle (String $url) {
 
-    vcsrepo { "${::home}/.vim/bundle/${name}":
+    vcsrepo { "${::hiera('localuser.home')}/.vim/bundle/${name}":
         ensure => present,
         source => $url,
     }

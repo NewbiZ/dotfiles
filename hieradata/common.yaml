@@ -1,0 +1,14 @@
+---
+localuser:
+    fullname: Aurelien Vallee
+    name: avallee
+    mail: vallee.aurelien@gmail.com
+    home: /home/avallee
+
+classes:
+  - vim
+  - bash
+  - tmux
+  - git
+  - x11
+  - i3

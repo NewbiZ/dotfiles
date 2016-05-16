@@ -1,23 +1,23 @@
 class vim::pathogen::setup {
 
-    file { "${::home}/.vim":
+    file { "${::hiera('localuser.home')}/.vim":
         ensure => directory,
     }
 
-    file { "${::home}/.vim/autoload":
+    file { "${::hiera('localuser.home')}/.vim/autoload":
         ensure  => directory,
-        require => File["${::home}/.vim"]
+        require => File["${::hiera('localuser.home')}/.vim"]
     }
 
-    file { "${::home}/.vim/bundle":
+    file { "${::hiera('localuser.home')}/.vim/bundle":
         ensure  => directory,
-        require => File["${::home}/.vim"]
+        require => File["${::hiera('localuser.home')}/.vim"]
     }
     
-    file { "${::home}/.vim/autoload/pathogen.vim":
+    file { "${::hiera('localuser.home')}/.vim/autoload/pathogen.vim":
         ensure  => file,
         source  => 'puppet:///modules/vim/pathogen.vim',
-        require => File["${::home}/.vim/autoload"]
+        require => File["${::hiera('localuser.home')}/.vim/autoload"]
     }
 
 }
