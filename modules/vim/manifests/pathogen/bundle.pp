@@ -4,6 +4,7 @@ define vim::pathogen::bundle (String $url) {
         ensure   => present,
         provider => git,
         source   => $url,
+        user     => $::username,
     }
 
 }

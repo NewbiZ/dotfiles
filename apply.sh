@@ -20,4 +20,4 @@ sudo puppet module install puppetlabs-vcsrepo
 
 # Apply puppet manifest locally
 echo -e "\n> Applying puppet manifest:"
-puppet apply --modulepath ${DIR}/modules ${DIR}/manifests/site.pp
+sudo puppet apply --verbose --modulepath ${DIR}/modules ${DIR}/manifests
