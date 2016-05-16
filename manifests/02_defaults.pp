@@ -5,5 +5,10 @@ Exec {
 }
 
 File {
-    owner => $username,
+    owner => $::username,
+}
+
+Vcsrepo {
+    user     => $::username,
+    provider => git,
 }
