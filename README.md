@@ -3,6 +3,7 @@
 - git
 - puppet (>=4)
 - puppet-lint (optional)
+- graphviz (optional)
 
 ### Usage
 
