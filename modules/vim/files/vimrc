@@ -1,7 +1,3 @@
-" Vim configuration file (.vimrc)
-" Last edited: 2009-09-04
-" Aurelien Vallee <vallee.aurelien@gmail.com>
-
 " Enable Pathogen
 execute pathogen#infect()
 

@@ -1,5 +1,9 @@
 class x11 {
 
+    package { 'xorg':
+        ensure => present,
+    }
+
     file { "${::home}/.Xresources":
         ensure => file,
         source => 'puppet:///modules/x11/Xresources'
